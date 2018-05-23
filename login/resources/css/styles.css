@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+.grid-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.left {
+    background: url("../img/background.jpg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/
+    margin: 0 auto;
+    background: white;
+}
+
+.logo-label-container {
+    padding: 0 0 54px;
+    display: flex;
+}
+
+.fullsize {
+    width: 272px;
+}
+
+.apex-label {
+    font-family: 'Open Sans';
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 48px;
+    color: #54565A;
+}
+
+.username-input, .password-input { 
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    width: 100%;
+}
+
+.username-input {
+    margin-bottom: 78px;
+}
+
+.login-button {
+    height: 36px;
+    width: 100%;
+    margin-top: 100px;
+    background-color: rgba(0,0,0,.12);
+    color: rgba(0,0,0,.26);
+    border: none;
+    cursor: pointer;
+}
+
+.forgot-password {
+    text-align: right;
+    float: right;
+    text-decoration: none;
+    cursor: pointer;
+    color: #F8971D;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.kc-feedback-text {
+    color: red;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
