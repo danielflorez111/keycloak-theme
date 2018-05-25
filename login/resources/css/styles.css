@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 * {
     box-sizing: border-box;
@@ -14,7 +15,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-
     display: flex;
     justify-content: center;
     align-items: center;  
@@ -24,52 +24,90 @@ body {
     background: white;
     width: 440px;
     height: 476px;
-    margin: 0 auto;
 }
 
 .logo-container {
-    padding: 64px 0px 64px 0px;
-    text-align: center;
+    height: 144px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 76px;
 }
 
 form {
-    text-align: center;
-    padding: 0px 24px 0px 24px;
+    padding: 0 24px 0 24px;
+}
+
+.input-group {
+    position: relative;
+    margin: 35px 0 20px 0;
 }
 
 .username-input, .password-input {
-    border: 0;
-    outline: 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    display: block;
+    font-size: 14px;
     background: transparent;
     border-bottom: 1px solid rgba(0,0,0,.12);
-    /* border-bottom: 1px solid #707070; */
-    width: 100%;
+    padding: 10px 10px 10px 5px;
+    -webkit-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+}
+
+.username-input:focus, .password-input:focus {
+    box-shadow: -8px 9px 0px -8px #a6a6a6, 8px 9px 0px -8px #a6a6a6;
+}
+
+.username-label, .password-label  {
+    font-family: 'Roboto', sans-serif;
+    color: #707070;
+    font-size: 12px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+    -webkit-transition: 0.3s ease all;
+}
+
+.username-input:focus ~ .username-label,
+.username-input:valid ~ .username-label,
+.password-input:focus ~ .password-label,
+.password-input:valid ~ .password-label {
+    top: -20px;
+    font-size: 10px;
+    color: #707070;
 }
 
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px white inset;
 }
 
-.username-input {
-    margin-bottom: 54px;
-}
-
 .forgot-password {
+    font-family: 'Roboto', sans-serif;
     text-align: right;
     float: right;
     text-decoration: none;
     cursor: pointer;
     color: #F8971D;
-    font-family: 'Open Sans';
     font-size: 14px;
-    margin-top: 8px;
+    margin-top: -12px;
 }
 
 .login-button {
+    font-family: 'Roboto', sans-serif;
     height: 36px;
     width: 100%;
-    margin-top: 80px;
-    background-color: rgba(0,0,0,.12);
+    padding: 0px;
+    margin-top: 52px;
+    background-color: rgba(0,0,0,.24);
     color: rgba(0,0,0,.26);
     border: none;
     cursor: pointer;
@@ -77,16 +115,9 @@ input:-webkit-autofill {
     font-size: 14px;
 }
 
-
-/* .kc-feedback-text {
+.kc-feedback-text {
+    font-family: 'Roboto', sans-serif;
     color: red;
-} */
-.username-input, .password-input {
-    /* box-shadow: -8px 10px 0px -7px #ebebeb, 8px 10px 0px -7px #ebebeb; */
-    -webkit-transition: box-shadow 0.3s;
-    transition: box-shadow 0.3s;
-}
-
-.username-input:focus, .password-input:focus {
-    box-shadow: -8px 9px 0px -8px #a6a6a6, 8px 9px 0px -8px #a6a6a6;
+    font-size: 14px;
+    padding: 0 24px 0 24px;
 }

@@ -3,7 +3,7 @@
 <div class="login-box">
 
     <div class="logo-container">
-        <img src="${url.resourcesPath}/img/apex_a.png">
+        <img class="logo" src="${url.resourcesPath}/img/apex_logo.png">
     </div>
 
 
@@ -26,7 +26,10 @@
                             <#if usernameEditDisabled??>
                                 <input class="username-input" placeholder="Username" tabindex="1" id="username" name="username" value="${(login.username!'')}" type="text" disabled />
                             <#else>
-                                <input class="username-input" placeholder="Username" tabindex="1" id="username" name="username" value="${(login.username!'')}" type="text" autofocus autocomplete="off" />
+                                <div class="input-group">
+                                    <input class="username-input" tabindex="1" id="username" name="username" value="${(login.username!'')}" type="text" autocomplete="off" required/>
+                                    <label class="username-label">User</label>
+                                </div>
                             </#if>
                         </div>
                     </div>
@@ -37,7 +40,10 @@
                         </div>  -->
 
                         <div class="${properties.kcInputWrapperClass!}">
-                            <input class="password-input" placeholder="Password" tabindex="2" id="password" name="password" type="password" autocomplete="off" />
+                            <div class="input-group">
+                                <input class="password-input" tabindex="2" id="password" name="password" type="password" autocomplete="off" required/>
+                                <label class="password-label">Password</label>
+                            </div>
                         </div>
                     </div>
 
