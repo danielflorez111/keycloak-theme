@@ -79,15 +79,17 @@ form {
 
 .username-input:focus ~ .username-label,
 .username-input:valid ~ .username-label,
+.username-input:-webkit-autofill ~ .username-label,
 .password-input:focus ~ .password-label,
-.password-input:valid ~ .password-label {
+.password-input:valid ~ .password-label,
+.password-input:-webkit-autofill ~ .password-label {
     top: -20px;
     font-size: 10px;
     color: #707070;
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px white inset;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 .forgot-password {
